@@ -28,7 +28,6 @@ function Login(){
 
     }
 
-    const year = new Date().getFullYear();
     return (
         <div className="wrapper">
           <div className="form">
@@ -53,10 +52,7 @@ function Login(){
               </div>
             </form>
 
-            <h1 className="error">{error}</h1>
-            <footer>
-              <p>Copyright © {year} by Infinium</p>
-            </footer>    
+            <h1 className="error">{error}</h1>    
           </div>
         </div>
     
