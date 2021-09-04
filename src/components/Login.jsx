@@ -53,12 +53,11 @@ function Login(){
               </div>
             </form>
 
-            <h1 className="error">{error}</h1>    
+            <h1 className="error">{error}</h1>
+            <footer>
+              <p>Copyright © {year} by Infinium</p>
+            </footer>    
           </div>
-
-          <footer>
-            <p>Copyright © {year} by Infinium</p>
-          </footer>
         </div>
     
       );
