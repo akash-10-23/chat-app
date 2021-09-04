@@ -14,14 +14,15 @@ function ChatFeed(props){
 
         return keys.map((key,index) =>{
             const message = messages[key];
-            const lastMessage = index === 0 ? null : keys[index-1];
+            const lastMessageKey = index === 0 ? null : keys[index-1];
             const isMyMessage = userName === message.sender.username;
 
             return (
                 <div key= {`msg_${index}`} style={{ width: '100%' }}>
                     <div className="message-block">
                         {
-                            isMyMessage ? <MyMessage/> : <UserMessage/>
+                            isMyMessage ? <MyMessage message={message}/> :
+                                        <UserMessage message={message} lastMessage={messages[lastMessageKey]}/>
                         }
                     </div> 
 
